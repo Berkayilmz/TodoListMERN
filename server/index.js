@@ -81,7 +81,7 @@ app.put('/:id', async (req,res)=>{
         }else{
             const {id}=req.params;
             const updatedTask=await TodoModel.findByIdAndUpdate(id,req.body);
-            if(!updatedTask){
+            if(!upda){
                 return res.status(404).send({message:'Task not found!'});
             }else{
                 return res.status(200).send(updatedTask);
